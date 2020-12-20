@@ -1,20 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bai ve nha buoi 2</title>
-
+  <title>Document</title>
 </head>
 <body>
-    <script>
-        // Bài 1: Cho 1 mảng các chuỗi. Viết hàm lọc ra các phần tử có độ dài lớn nhất. Ví dụ với 
-        //tham số [''aba'', ''aa'', ''ad'', ''c'', ''vcd''] thì kết quả trả về [''aba'', ''vcd''].
-      function bai1(arr){
-       var arr1= arr.sort(function(a, b){return a.length  - b.length});
-       return arr1
-      }
+  <script>
+   // bai1: Cho 1 mảng các chuỗi. Viết hàm lọc ra các phần tử có độ dài lớn nhất. Ví dụ với tham số 
+   //[''aba'', ''aa'', ''ad'', ''c'', ''vcd''] 
+   //thì kết quả trả về [''aba'', ''vcd''].
 
-    </script>
+   function bai1(arr){
+    var maxstr = arr[0];
+     var dodai = arr.length;
+    var mangmoi = arr.filter(function(longest){
+            for(i=0;i<dodai;i++){
+              if(arr[i].length >maxstr.length){
+                maxstr = arr[i]
+              }
+            }
+      return longest.length == maxstr.length;
+    })
+    return mangmoi;
+   }
+
+   //Bài 2: Viết hàm so sánh mảng, truyền vào 2 mảng bất kỳ (chỉ chứa số nguyên), 
+   //kết quả trả về là 1 mảng chỉ chứa những phần tử không đồng thời nằm trong 2 mảng truyền vào.
+   // Ví dụ truyền vào   [1, 2, 3] và [1, 3, 4, 5, 5] thì kết quả trả về là mảng [2, 4, 5, 5].
+
+   
+  //Bài 3: Cho 2 số nguyên dương m và n. Tạo ra 1 mảng 2 chiều m x n là các số nguyên liên tiếp (tính từ 1) theo kiểu ziczac. 
+  //Ví dụ với m = 3 và n = 4 thì kết quả là mảng 2 chiều như sau [ [1, 2, 3, 4], [8, 7, 6, 5], [9, 10, 11, 12] ].
+
+   
+   //Bài 4: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }.
+    //Viết hàm tính ra số tuổi trung bình của toàn bộ sinh viên.
+
+    function bai4(nhapmang){
+      let tongtuoi = 0;
+      let dodai = nhapmang.length;
+      for(i=0;i<dodai;i++){
+          tongtuoi = tongtuoi + nhapmang[i].age;
+      }
+      return tuoitb = tongtuoi/dodai;
+    }
+   // bai 5:Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }.
+   // Viết hàm sắp xếp lại mảng trên theo tuổi học viên từ cao đến thấp.
+
+   function bai5(nhapmang){
+    
+    return nhapmang.sort(function(a, b){return b.age - a.age});}
+  //bai6: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }. 
+  //Viết hàm sắp xếp lại mảng trên theo tên học viên (không phân biệt hoa thường).
+    function bai6(nhapmang){
+      return nhapmang.sort(function(a, b){
+        var x = a.name.toLowerCase();
+        var y = b.name.toLowerCase();
+
+        if(x<y){
+          return -1;
+        }
+
+        if(x>y){
+          return 1;
+        }
+
+        return 0
+      });
+    }
+// bai 7:Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }. 
+//Viết hàm lọc ra những sinh viên nào có tên bắt đầu bằng chữ ''H'' hoặc ''h''.
+
+function bai7(nhapmang){
+var locmang = nhapmang.filter(function(person){
+   return person.name[0].toLowerCase() === "h" 
+ });
+ return locmang;
+}
+  </script>
 </body>
 </html>

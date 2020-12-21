@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Document</title>
+    <style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: sans-serif;font-size: 14px;color: #333;
+		}
+
+		.calculator{
+			width:300px;
+			height: auto;
+			margin: 20px auto;
+			padding: 10px;
+			border: 1px solid #666;
+			border-radius: 4px;
+		}
+
+		.box-calculation {
+			width: calc((100% - 16px));
+			background-color: #f8f7f9;
+			border: 1px solid #666;
+			padding: 5px 7px;
+			font-size: 20px;
+			border-bottom: none;
+		}
+        .box-result {
+			width: calc((100% - 16px));
+			background-color: #f8f7f9;
+			border: 1px solid #666;
+			padding: 5px 7px;
+			font-size: 20px;
+			border-top: none;
+			text-align: right;
+		}
+         .box-button button {
+			 width: 32.4%;
+			 height: 40px;
+			 margin-top: 5px;
+			 font-size: 20px;
+			 color: #fff;
+			 border: none;
+			 cursor: pointer;
+			 border-radius: 4px;
+		 }
+
+		 button.number{
+			 background-color: #428cba;
+		 }
+		 button.operation{
+			 background-color: #5cb85c;
+		 }
+		 button.refresh{
+			 background-color: #d9534f;
+		 }
+		button.del {background-color: #f0ad4e;}
+        button.dot, button.equal, button.changetheme {background-color: #5bc0de;}
+        button.changetheme{
+			font-size: 14px;
+		}
+
+		.calculator-changed {
+			background-color: #333;
+		}
+	</style>
+	
+</head>
+<body>
+<div class="calculator">
+  <input type="text" class="box-calculation" value="">
+  <input type="text" class="box-result" value="">
+  <div class="box-button">
+	  <button class="refresh">CE</button>
+	  <button class="del">CE</button>
+	  <button class="plus operation">+</button>
+	  <button class="minus operation">-</button>
+	  <button class="times operation">*</button>
+	  <button class="devide operation">/</button>
+	  <button class="number">9</button>
+	  <button class="number">8</button>
+	  <button class="number">7</button>
+	  <button class="number">6</button>
+	  <button class="number">5</button>
+	  <button class="number">4</button>
+	  <button class="number">3</button>
+	  <button class="number">2</button>
+	  <button class="number">1</button>
+	  <button class="number">0</button>
+	  <button class="dot">.</button>
+	  <button class="equal">=</button>
+	  <button class="changetheme">Change Theme</button>
+  </div>
+</div>
+</body>
+<script src="jquery-3.5.1.min.js"></script>
+<script src="javascript.js"></script>
+</html>

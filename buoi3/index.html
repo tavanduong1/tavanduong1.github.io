@@ -16,8 +16,8 @@
      var dodai = arr.length;
     var mangmoi = arr.filter(function(longest){
             for(i=0;i<dodai;i++){
-              if(arr[i].length >maxstr.length){
-                maxstr = arr[i]
+              if(arr[i].length > maxstr.length){
+                maxstr = arr[i];
               }
             }
       return longest.length == maxstr.length;
@@ -49,7 +49,6 @@
    // Viết hàm sắp xếp lại mảng trên theo tuổi học viên từ cao đến thấp.
 
    function bai5(nhapmang){
-    
     return nhapmang.sort(function(a, b){return b.age - a.age});}
   //bai6: Cho 1 mảng các object chứa thông tin sinh viên dạng { name: ''Huy'', gender: ''Male'', age: 20 }. 
   //Viết hàm sắp xếp lại mảng trên theo tên học viên (không phân biệt hoa thường).

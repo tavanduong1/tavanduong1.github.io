@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thêm mới học viên</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <style>
         *{
             margin: 0px;
@@ -89,37 +95,49 @@
     </style>
 </head>
 <body>
+
+
     <div class="container">
         <h1>Thêm mới học viên</h1>
+
         <form action="" method="POST">
         <div class="name">
            <label for="name">Họ tên<i class="fas fa-star-of-life"></i></label>
-           <input type="text" name="name" id="name">
+           <input type="text" name="name" id="name" value="">
         </div>
 
         <div class="name">
-            <label for="year">Năm sinh</i></label>
-            <input type="text" name="year" id="year">
+            <label for="year">Năm sinh</label>
+            <input type="text" name="year" id="year" value=""> 
          </div>
 
          <div class="name">
             <label for="email">Email<i class="fas fa-star-of-life"></i></label>
-            <input type="text" name="email" id="email">
+            <input type="text" name="email" id="email" value="">
          </div>
 
          <div class="name">
             <label for="phone">Phone<i class="fas fa-star-of-life"></i></label>
-            <input type="text" name="phone" id="phone">
+            <input type="text" name="phone" id="phone" value="">
          </div>
 
          
         </form>
 
         <div class="button">
-            <a href="index.html" ><button><i class="fas fa-chevron-left"></i>Quay lại</button></a>
+            <a href="index.html" ><button ><i class="fas fa-chevron-left" ></i>Quay lại</button></a>
   
-            <a href="#"><button><i class="fas fa-save"></i>Lưu</button></a>
+            <a href="index.html"><button id="btn" onclick="addEventAddStudent()"><i class="fas fa-save"></i>Lưu</button></a>
         </div>
     </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <script src="buoi5.js">
+    </script>
 </body>
 </html>

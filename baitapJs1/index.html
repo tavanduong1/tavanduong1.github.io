@@ -44,7 +44,7 @@ function bai2(n) {
             if(n%j==0){
             tong += j;}     
         }
-        console.log(tong);
+        return tong;
 }
 
 
@@ -52,11 +52,11 @@ function bai2(n) {
 
 function bai3(n) {
 
-    var kq =0;
+    var kq = true;
     if (n <2) {
         return false;
     }
-    if (n==2 || n==3 || n==5) {
+    if (n==2) {
         return true;
     }
     else {
@@ -64,10 +64,6 @@ function bai3(n) {
 
             if (n%i==0) {
               kq = false;    
-            }
-
-            else {
-               kq = true;
             }
         }
     }
@@ -79,16 +75,14 @@ function bai3(n) {
 //Bài 4: Cho 1 số nguyên dương. Tính tổng tất cả các số nguyên tố nhỏ hơn hoặc bằng tham số truyền vào.
 
 function bai4(n) {
- var soUoc = 0;
-  var tong = 0;
-  var kiemtra = 1;
- for (i=1;i<=n;i++){
-      for (j =1;j<=i;j++){
-          if(i%j==0){
+var soUoc = 0;
+var tong = 0;
+var kiemtra = 1;
+ for (i=1;i<=n/2;i++){
+        if(n%i==0){
              soUoc = soUoc +1;
           }
-      }
-      if(soUoc == 2) {
+        if(soUoc == 2) {
           tong = tong +i;
       }
       var soUoc = 0;
@@ -135,13 +129,9 @@ function bai7(str){
     for(i=0;i<=dodai/2;i++){
         if(chuoimoi[i]===chuoimoi[dodai-i-1]){
             result = true;
-        }
-        else {
-            result = false;
-        }
+        }  
     }
     return result;
-   
 }
 
 
